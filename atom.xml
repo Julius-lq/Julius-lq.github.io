@@ -1,27 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>say something</title>
-  
-  
+  <icon>https://www.gravatar.com/avatar/17d7db889268833ec08d56d0e45457d7</icon>
+  <subtitle>凡心所向，素履以往。</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-04-20T07:37:40.515Z</updated>
+  <updated>2024-04-24T11:55:58.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
     <name>amoureux</name>
-    
+    <email>2980395329@qq.com</email>
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
+    <title>Git统计项目代码量</title>
+    <link href="http://example.com/2024/04/20/Git%E7%BB%9F%E8%AE%A1%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81%E9%87%8F/"/>
+    <id>http://example.com/2024/04/20/Git%E7%BB%9F%E8%AE%A1%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81%E9%87%8F/</id>
+    <published>2024-04-20T11:55:58.000Z</published>
+    <updated>2024-04-24T11:55:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Git统计项目代码量"><a href="#Git统计项目代码量" class="headerlink" title="Git统计项目代码量"></a>Git统计项目代码量</h1><p>以知胜助手为例（截至2022-7-9）</p><h2 id="1-使用Git语句查询"><a href="#1-使用Git语句查询" class="headerlink" title="1.使用Git语句查询"></a>1.使用Git语句查询</h2><h3 id="Git统计个人提交代码行数"><a href="#Git统计个人提交代码行数" class="headerlink" title="Git统计个人提交代码行数"></a>Git统计个人提交代码行数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --format=&#x27;%aN&#x27; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author=&quot;$name&quot; --pretty=tformat: --numstat | awk &#x27;&#123; add += $1; subs += $2; loc += $1 - $2 &#125; END &#123; printf &quot;添加行数: %s, 移除行数: %s, 总行数: %s\n&quot;, add, subs, loc &#125;&#x27; -; done</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> --format=<span class="string">&#x27;%aN&#x27;</span> | <span class="built_in">sort</span> -u | <span class="keyword">while</span> <span class="built_in">read</span> name; <span class="keyword">do</span> <span class="built_in">echo</span> -en <span class="string">&quot;<span class="variable">$name</span>\t&quot;</span>; git <span class="built_in">log</span> --author=<span class="string">&quot;<span class="variable">$name</span>&quot;</span> --pretty=tformat: --numstat | awk <span class="string">&#x27;&#123; add += $1; subs += $2; loc += $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#x27;</span> -; <span class="keyword">done</span></span><br></pre></td></tr></table></figure><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220709132859906.png" alt="image-20220709132859906"><br>$$<br>目前代码我提交6996行\肖砥诚833\董广晟322行<br>$$</p><h3 id="Git统计项目总行数"><a href="#Git统计项目总行数" class="headerlink" title="Git统计项目总行数"></a>Git统计项目总行数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span>  --pretty=tformat: --numstat | awk <span class="string">&#x27;&#123; add += $1; subs += $2; loc += $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#x27;</span> -</span><br></pre></td></tr></table></figure><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220709133007154.png" alt="image-20220709133007154"><br>$$<br>目前项目一共有8151行代码，其中肖砥诚833行代码，董广晟322行代码，由此可得我6996行代码，即第一个显示的应该是我的邮箱那个账号而不是用户名那个<br>$$</p><h3 id="查看git上个人代码量-需要修改username！！！"><a href="#查看git上个人代码量-需要修改username！！！" class="headerlink" title="查看git上个人代码量(需要修改username！！！)"></a>查看git上个人代码量(需要修改username！！！)</h3><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --author=<span class="string">&quot;username&quot;</span> --pretty=tformat: --numstat | awk <span class="string">&#x27;&#123; add += <span class="subst">$1</span>; subs += <span class="subst">$2</span>; loc += <span class="subst">$1</span> - <span class="subst">$2</span> &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#x27;</span> -</span><br></pre></td></tr></table></figure><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220709133342915.png" alt="image-20220709133342915"></p><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220709133413704.png" alt="image-20220709133413704"></p><p>$$<br>能查看到我写了6440行代码和6996行代码，用用户名查询与邮箱不同，原因未知，可能是编译器或者我直接在gitee上更改的原因吧<br>$$</p><h3 id="查看时间范围内，个人代码量统计"><a href="#查看时间范围内，个人代码量统计" class="headerlink" title="查看时间范围内，个人代码量统计"></a>查看时间范围内，个人代码量统计</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git log --since=&quot;2022-05-01&quot; --before=&quot;2022-08-25&quot; --author=&quot;amoureux&quot; \</span><br><span class="line">--pretty=tformat: --numstat | awk &#x27;&#123; add += $1; subs += $2; loc += $1 - $2 &#125; END &#123; printf &quot;新增行数: %s, 移除行数: %s, 总行数: %s\n&quot;, add, subs, loc &#125;&#x27;</span><br></pre></td></tr></table></figure><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220709133519769.png" alt="image-20220709133519769"><br>$$<br>感觉这个用处不大<br>$$</p><h3 id="查看仓库提交者排名前-5"><a href="#查看仓库提交者排名前-5" class="headerlink" title="查看仓库提交者排名前 5"></a>查看仓库提交者排名前 5</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --pretty=&#x27;%aN&#x27; | sort | uniq -c | sort -k1 -n -r | head -n 5</span><br></pre></td></tr></table></figure><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220709133533260.png" alt="image-20220709133533260"></p><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220709124047035.png" alt="image-20220709124047035"><br>$$<br>这个和gitee统计功能有点像，区别不清楚<br>$$</p><h3 id="贡献者统计"><a href="#贡献者统计" class="headerlink" title="贡献者统计"></a>贡献者统计</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --pretty=&#x27;%aN&#x27; | sort -u | wc -l</span><br></pre></td></tr></table></figure><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220709124204949.png" alt="image-20220709124204949"></p><h3 id="提交数统计"><a href="#提交数统计" class="headerlink" title="提交数统计"></a>提交数统计</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> --oneline | <span class="built_in">wc</span> -l</span><br></pre></td></tr></table></figure><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220709133607177.png" alt="image-20220709133607177"><br>$$<br>一共提交了62次，和前面的数据有点对不上，码云数据统计显示提交了64次\ok是我没有update，pull之后数据相同了<br>$$</p><table><thead><tr><th></th><th>码云Gitee</th><th>Git命令行</th></tr></thead><tbody><tr><td>代码总数</td><td>64</td><td>64</td></tr><tr><td>三人各自提交代码数<br>(刘清&#x2F;肖砥诚&#x2F;董广晟)</td><td>NaN</td><td>6994&#x2F;833&#x2F;322</td></tr><tr><td>提交总数</td><td>NaN</td><td>8151</td></tr><tr><td>三人各自提交次数<br/>(刘清&#x2F;肖砥诚&#x2F;董广晟)</td><td>42&#x2F;5&#x2F;17</td><td>42&#x2F;5&#x2F;17</td></tr></tbody></table><h2 id="2-使用VSCode插件查询"><a href="#2-使用VSCode插件查询" class="headerlink" title="2.使用VSCode插件查询"></a>2.使用VSCode插件查询</h2><p>VSCode 插件—VS Code Counter</p><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220709132501550.png" alt="image-20220709132501550"><br>$$<br>目前项目一共是5925行代码<br>$$</p><h2 id="3-使用IDEA插件查询"><a href="#3-使用IDEA插件查询" class="headerlink" title="3.使用IDEA插件查询"></a>3.使用IDEA插件查询</h2><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220709131846477.png" alt="image-20220709131846477"></p><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220709132114412.png" alt="image-20220709132114412"><br>$$<br>截止目前，项目代码大概是45080行代码，与git出入挺大<br>$$</p>]]></content>
+    
+    
+    <summary type="html">slighsdlig</summary>
+    
+    
+    
+    <category term="Git工具" scheme="http://example.com/categories/Git%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Talk is cheap. Show me the code.</title>
+    <link href="http://example.com/2024/04/20/Talk%20is%20cheap,show%20me%20the%20code/"/>
+    <id>http://example.com/2024/04/20/Talk%20is%20cheap,show%20me%20the%20code/</id>
+    <published>2024-04-20T11:55:58.000Z</published>
+    <updated>2024-04-24T13:49:49.645Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Talk-is-cheap-Show-me-the-code"><a href="#Talk-is-cheap-Show-me-the-code" class="headerlink" title="Talk is cheap. Show me the code."></a>Talk is cheap. Show me the code.</h1><p>萌娘百科，万物皆可萌的百科全书！转载请标注来源页面的网页链接，并声明引自萌娘百科。内容不可商用。</p><p> <a href="https://zh.moegirl.org.cn/Talk_is_cheap._Show_me_the_code.">回到页面</a></p><p><a href="https://zh.moegirl.org.cn/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91:%E7%BC%96%E8%BE%91%E8%A7%84%E8%8C%83" title="萌娘百科:编辑规范"><img src="https://img.moegirl.org.cn/common/thumb/b/b7/%E5%A4%A7%E8%90%8C%E5%AD%97.svg/50px-%E5%A4%A7%E8%90%8C%E5%AD%97.svg.png" alt="大萌字.svg"></a></p><p><strong>萌娘百科欢迎您参与完善本条目☆Kira~</strong><br>欢迎正在阅读这个条目的您协助<a href="https://zh.moegirl.org.cn/index.php?title=Talk_is_cheap._Show_me_the_code.&action=edit">编辑本条目</a>。编辑前请阅读<a href="https://zh.moegirl.org.cn/Help:Wiki%E5%85%A5%E9%97%A8" title="Help:Wiki入门">Wiki入门</a>或<a href="https://zh.moegirl.org.cn/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91:%E7%BC%96%E8%BE%91%E8%A7%84%E8%8C%83" title="萌娘百科:编辑规范">条目编辑规范</a>，并查找相关资料。萌娘百科祝您在本站度过愉快的时光。</p><table border="1" class="infoboxSpecial" style="float: right; width: 260px; font-size: 90%; margin: 1em 0 1em 1em; background: #f9f9f9; border: 1px #999999 solid; border-collapse: collapse; clear: right;" cellpadding="2" cellspacing="0"><tbody><tr><td colspan="2" align="center"><a href="https://zh.moegirl.org.cn/File:Talkcheap.png" class="image"><img alt="Talkcheap.png" src="https://img.moegirl.org.cn/common/thumb/8/88/Talkcheap.png/280px-Talkcheap.png" width="280" height="172" srcset="https://img.moegirl.org.cn/common/thumb/8/88/Talkcheap.png/420px-Talkcheap.png 1.5x, https://img.moegirl.org.cn/common/thumb/8/88/Talkcheap.png/560px-Talkcheap.png 2x" data-file-width="1003" data-file-height="616" class="multimediaViewerScrollSet"></a></td></tr><tr><td colspan="2" align="center" bgcolor="#E0FFFF"><b>基本资料</b></td></tr><tr><th width="80px">用语名称</th><td align="center">Talk is cheap. Show me the code.</td></tr><tr><th>相关条目</th><td align="center"><a href="https://zh.moegirl.org.cn/%E9%94%AE%E7%9B%98%E4%BE%A0" title="键盘侠">键盘侠</a>、<a href="https://zh.moegirl.org.cn/%E7%A8%8B%E5%BA%8F%E5%91%98" title="程序员">程序员</a></td></tr></tbody></table><p>**Talk is cheap. Show me the code.<strong>（或</strong>Talk is cheap. Show me your code.**）是一句来源于<a href="https://zh.moegirl.org.cn/Linux" title="Linux">Linux</a>内核开发过程的网络流行语。</p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>在 2000 年 8 月 25 日，在讨论关于内核线程优化的问题时，一个人提出了一个他认为非常高效的方案<sup id="cite_ref-1" class="reference"><a href="https://zh.moegirl.org.cn/Talk_is_cheap._Show_me_the_code.#cite_note-1">[1]</a></sup>。Linus Torvalds 认为这个方案不好，便在回信中写下了这句至理名言：</p><table style="display: table; border-collapse: collapse; margin: auto; background-color:transparent;"><tbody><tr><td style="vertical-align: top; color:#B2B7F2; font-size:36px; font-family:'Times New Roman',serif; font-weight:bold; text-align:left; padding:10px 10px; line-height:100%">“</td><td style="text-align: left; padding: 1em; vertical-align: middle;">Talk is cheap. Show me the code.</td><td style="vertical-align: bottom; color:#B2B7F2; font-size:36px; font-family:'Times New Roman',serif; font-weight:bold; text-align:left; padding:10px 10px; line-height:100%">”</td></tr><tr><td colspan="3" style="font-size: smaller; text-align: right; padding-right: 4%;"><cite style="font-style:normal;">——Linus Torvalds<sup id="cite_ref-source_2-0" class="reference"><a href="https://zh.moegirl.org.cn/Talk_is_cheap._Show_me_the_code.#cite_note-source-2">[2]</a></sup><s class="just-kidding-text" title="只为博君一笑，不必照单全收XD" style="color: #666666; text-decoration-color: black;">李那厮·脱袜子</s></cite></td></tr></tbody></table><p>该名言后来流行了起来，广大程序员对这句话深表同意。</p><p>这句名言存在如下几个著名的翻译：</p><ul><li>屁话少说，放码过来。<sup id="cite_ref-zhihu1_3-0" class="reference"><a href="https://zh.moegirl.org.cn/Talk_is_cheap._Show_me_the_code.#cite_note-zhihu1-3">[3]</a></sup><ul><li><a href="https://zh.moegirl.org.cn/%E4%B8%89%E5%9B%BD%E6%9D%80:%E8%AE%B8%E8%A4%9A#%E7%95%8C%E9%99%90%E7%AA%81%E7%A0%B42018" title="三国杀:许褚"><del>废话少说，放码过来吧！</del></a></li></ul></li><li><a href="https://zh.moegirl.org.cn/%E9%94%AE%E7%9B%98%E4%BE%A0" title="键盘侠">键盘</a>总是简单，实现却是困难。</li><li><del>提需求谁都会，有本事你来写代码！</del></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Talk-is-cheap-Show-me-the-code&quot;&gt;&lt;a href=&quot;#Talk-is-cheap-Show-me-the-code&quot; class=&quot;headerlink&quot; title=&quot;Talk is cheap. Show me the code.</summary>
+      
+    
+    
+    
+    <category term="萌娘百科" scheme="http://example.com/categories/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91/"/>
+    
+    
+    <category term="琐记" scheme="http://example.com/tags/%E7%90%90%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Quick Start</title>
     <link href="http://example.com/2024/04/20/hello-world/"/>
     <id>http://example.com/2024/04/20/hello-world/</id>
-    <published>2024-04-20T07:37:40.515Z</published>
-    <updated>2024-04-20T07:37:40.515Z</updated>
+    <published>2024-04-20T11:55:58.000Z</published>
+    <updated>2024-04-24T13:49:37.126Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
@@ -33,6 +78,27 @@
     
     
     
+    <category term="Quick Start" scheme="http://example.com/categories/Quick-Start/"/>
+    
+    
+    <category term="Quick Start" scheme="http://example.com/tags/Quick-Start/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2024/04/20/text1/"/>
+    <id>http://example.com/2024/04/20/text1/</id>
+    <published>2024-04-20T11:55:58.000Z</published>
+    <updated>2024-04-24T13:49:57.500Z</updated>
+    
+    
+    
+    
+    <category term="Git工具" scheme="http://example.com/categories/Git%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="test" scheme="http://example.com/tags/test/"/>
     
   </entry>
   
