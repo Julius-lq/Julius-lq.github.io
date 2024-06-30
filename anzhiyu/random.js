@@ -1,3 +1,56 @@
-var posts=["2024/05/03/Flutter学习/","2024/04/20/Git统计项目代码量/","2024/04/26/RN vs Flutter/","2024/04/26/diy主机/","2024/04/20/Talk is cheap,show me the code/","2024/04/20/hello-world/","2024/04/20/text1/","2024/04/26/动态规划/","2024/04/30/性能优化实践/","2024/04/30/技术/三次握手和四次挥手/","2024/04/28/技术/刷题日记/","2024/04/30/技术/小红书面经/","2024/04/26/技术/大众点评/","2024/04/30/技术/技术博客阅读/","2024/02/26/技术/曲折的2023/","2024/04/27/技术/秋招&春招汇总/","2024/04/27/技术/第一次实习/","2024/04/30/技术/美团vs小红书/"];function toRandomPost(){
+var posts=["posts/3286.html","posts/a9cb.html","posts/d846.html","posts/2865.html","posts/b011.html","posts/182e.html","posts/45ee.html","posts/1de8.html","posts/9aed.html","posts/aaa4.html","posts/2865.html","posts/3eeb.html","posts/d706.html","posts/34b0.html","posts/f4b1.html","posts/3f09.html","posts/8b09.html","posts/4638.html","posts/e697.html","posts/9636.html","posts/6e9b.html","posts/f711.html","posts/dbe6.html","posts/4ade.html","posts/6682.html","posts/21dc.html","posts/71fc.html","posts/4efe.html"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
-  };
+  };var friend_link_list=[];
+    var refreshNum = 1;
+    function friendChainRandomTransmission() {
+      const randomIndex = Math.floor(Math.random() * friend_link_list.length);
+      const { name, link } = friend_link_list.splice(randomIndex, 1)[0];
+      Snackbar.show({
+        text:
+          "点击前往按钮进入随机一个友链，不保证跳转网站的安全性和可用性。本次随机到的是本站友链：「" + name + "」",
+        duration: 8000,
+        pos: "top-center",
+        actionText: "前往",
+        onActionClick: function (element) {
+          element.style.opacity = 0;
+          window.open(link, "_blank");
+        },
+      });
+    }
+    function addFriendLinksInFooter() {
+      var footerRandomFriendsBtn = document.getElementById("footer-random-friends-btn");
+      if(!footerRandomFriendsBtn) return;
+      footerRandomFriendsBtn.style.opacity = "0.2";
+      footerRandomFriendsBtn.style.transitionDuration = "0.3s";
+      footerRandomFriendsBtn.style.transform = "rotate(" + 360 * refreshNum++ + "deg)";
+      const finalLinkList = [];
+  
+      let count = 0;
+
+      while (friend_link_list.length && count < 3) {
+        const randomIndex = Math.floor(Math.random() * friend_link_list.length);
+        const { name, link, avatar } = friend_link_list.splice(randomIndex, 1)[0];
+  
+        finalLinkList.push({
+          name,
+          link,
+          avatar,
+        });
+        count++;
+      }
+  
+      let html = finalLinkList
+        .map(({ name, link }) => {
+          const returnInfo = "<a class='footer-item' href='" + link + "' target='_blank' rel='noopener nofollow'>" + name + "</a>"
+          return returnInfo;
+        })
+        .join("");
+  
+      html += "<a class='footer-item' href='/link/'>更多</a>";
+
+      document.getElementById("friend-links-in-footer").innerHTML = html;
+
+      setTimeout(()=>{
+        footerRandomFriendsBtn.style.opacity = "1";
+      }, 300)
+    };
