@@ -6,7 +6,7 @@
   <link href="https://julius-lq.github.io/atom.xml" rel="self"/>
   
   <link href="https://julius-lq.github.io/"/>
-  <updated>2024-06-30T07:59:24.965Z</updated>
+  <updated>2024-06-30T13:08:03.131Z</updated>
   <id>https://julius-lq.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nvm和volta</title>
+    <link href="https://julius-lq.github.io/posts/undefined.html"/>
+    <id>https://julius-lq.github.io/posts/undefined.html</id>
+    <published>2024-06-30T13:02:41.932Z</published>
+    <updated>2024-06-30T13:08:03.131Z</updated>
+    
+    
+    
+    
+    <category term="前端" scheme="https://julius-lq.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="前端" scheme="https://julius-lq.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>小红书面试总结</title>
@@ -353,6 +370,23 @@
   </entry>
   
   <entry>
+    <title>TCP vs UDP</title>
+    <link href="https://julius-lq.github.io/posts/2865.html"/>
+    <id>https://julius-lq.github.io/posts/2865.html</id>
+    <published>2024-04-26T06:11:58.000Z</published>
+    <updated>2024-06-30T07:59:24.961Z</updated>
+    
+    
+    
+    
+    <category term="计算机硬件" scheme="https://julius-lq.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6/"/>
+    
+    
+    <category term="装机" scheme="https://julius-lq.github.io/tags/%E8%A3%85%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>RN vs Flutter</title>
     <link href="https://julius-lq.github.io/posts/d846.html"/>
     <id>https://julius-lq.github.io/posts/d846.html</id>
@@ -377,23 +411,6 @@
   </entry>
   
   <entry>
-    <title>TCP vs UDP</title>
-    <link href="https://julius-lq.github.io/posts/2865.html"/>
-    <id>https://julius-lq.github.io/posts/2865.html</id>
-    <published>2024-04-26T06:11:58.000Z</published>
-    <updated>2024-06-30T07:59:24.961Z</updated>
-    
-    
-    
-    
-    <category term="计算机硬件" scheme="https://julius-lq.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6/"/>
-    
-    
-    <category term="装机" scheme="https://julius-lq.github.io/tags/%E8%A3%85%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
     <title>diy主机</title>
     <link href="https://julius-lq.github.io/posts/182e.html"/>
     <id>https://julius-lq.github.io/posts/182e.html</id>
@@ -406,39 +423,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;年轻人的第一台主机&quot;&gt;&lt;a href=&quot;#年轻人的第一台主机&quot; class=&quot;headerlink&quot; title=&quot;年轻人的第一台主机&quot;&gt;&lt;/a&gt;年轻人的第一台主机&lt;/h1&gt;&lt;h3 id=&quot;为什么要装台式&quot;&gt;&lt;a href=&quot;#为什么要装台式&quot; class=&quot;he</summary>
-      
-    
-    
-    
-    <category term="计算机硬件" scheme="https://julius-lq.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6/"/>
-    
-    
-    <category term="装机" scheme="https://julius-lq.github.io/tags/%E8%A3%85%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TCP vs UDP</title>
-    <link href="https://julius-lq.github.io/posts/2865.html"/>
-    <id>https://julius-lq.github.io/posts/2865.html</id>
-    <published>2024-04-26T06:11:58.000Z</published>
-    <updated>2024-06-30T07:59:24.963Z</updated>
-    
-    <content type="html"><![CDATA[<table><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td><img src="https://gao7pic.gao7.com/a597b5551e4345119678baa57b95aba5.png"></td><td></td><td></td></tr><tr><td><img src="https://img2022.cnblogs.com/blog/2690786/202206/2690786-20220613104652545-66016415.png"></td><td></td><td></td></tr><tr><td><img src="https://c-ssl.duitang.com/uploads/item/201805/29/20180529173314_vfwHu.jpeg"></td><td></td><td></td></tr><tr><td><img src="https://pic4.zhimg.com/v2-cafe76b86a9262069e3dec3479b05157_r.jpg"></td><td></td><td></td></tr><tr><td><img src="https://pic1.zhimg.com/v2-3f0f9d5b1e8dd10ee9994135efd048d3_r.jpg"></td><td></td><td></td></tr><tr><td><img src="https://ts1.cn.mm.bing.net/th/id/R-C.de328f419f6a9c1e2295fb4199fc7858?rik=oySQjfMZPt9d1g&riu=http://pic.rmb.bdstatic.com/de328f419f6a9c1e2295fb4199fc7858.jpeg&ehk=3hDTYAYR7eArRkyLVPDW2VWKWaOpxFgrDbR4ZU401yI=&risl=&pid=ImgRaw&r=0"></td><td></td><td></td></tr><tr><td><img src="https://pic4.zhimg.com/v2-5d09483436eccb5fe9e26aed8ff906e3_r.jpg"></td><td></td><td></td></tr><tr><td><img src="https://wallpaperm.cmcm.com/f7655791700a6ee549a572dd3439f4eb.jpg"></td><td></td><td></td></tr><tr><td><img src="https://bbsfiles.vivo.com.cn/vivobbs/attachment/forum/201602/09/101403wtl95dkldd452h9k.jpg"></td><td></td><td></td></tr><tr><td><img src="https://c-ssl.duitang.com/uploads/blog/202107/08/20210708121415_cfd0f.thumb.1000_0.jpg"></td><td></td><td></td></tr><tr><td><img src="https://pic3.zhimg.com/v2-7a5495001a731ff10b567e89f19584ff_r.jpg"></td><td></td><td></td></tr><tr><td>![](<a href="https://pic.bizhi66.com/pic/76ecca1f62d55cea95dd9dfcec3078cc">76ecca1f62d55cea95dd9dfcec3078cc (1275×719) (bizhi66.com)</a></td><td></td><td></td></tr><tr><td><img src="https://www.wywyx.com/uploads/allimg/220117/15015A628-2.jpg"></td><td></td><td></td></tr><tr><td><img src="https://img-baofun.zhhainiao.com/pcwallpaper_ugc/static/d1bf0a45314b670ed5fcb6909fe56c2c.jpg?x-oss-process=image/resize,m_lfit,w_960,h_540"></td><td></td><td></td></tr><tr><td><img src="https://wallpaperaccess.com/full/3841286.jpg"></td><td></td><td></td></tr><tr><td><img src="https://dl.bobopic.com/small/68033001.jpg"></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;&lt;img src=&quot;https://gao7pic.gao7.com/a597b5551e4345119678baa</summary>
       
     
     
